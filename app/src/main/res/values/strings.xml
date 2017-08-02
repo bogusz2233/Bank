@@ -2,6 +2,12 @@
     <string name="app_name">Bank</string>
     <string name="tekstPrzywitanie">Witaj w naszym banku</string>
 
+    <string name="account_balance">Stan konta</string>
+    <string name="deposit">Wpłata</string>
+    <string name="payoff">Wypłata</string>
+
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Nothing changed</string>
+    <string name="mini_game">Mini gra</string>
+    <string name="about_us">O nas</string>
 </resources>
