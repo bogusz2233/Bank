@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="com.example.bogusz.bank.StanKonta">
+
+    <TextView
+
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        android:text="stan konta"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/txValue"
+        android:layout_marginTop="20dp"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        android:text="Value"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+
+</LinearLayout>

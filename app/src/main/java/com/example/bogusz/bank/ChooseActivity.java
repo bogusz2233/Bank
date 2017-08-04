@@ -114,10 +114,34 @@ public class ChooseActivity extends AppCompatActivity {
         //fourth button
         customButtons.get(3).changeText(R.string.mini_game);
         customButtons.get(3).changeImage(R.drawable.controller);
-
+        customButtons.get(3).getView().setOnClickListener(switchToMGame());
         // fifth button
         customButtons.get(4).changeText(R.string.about_us);
         customButtons.get(4).changeImage(R.drawable.dolar);
+    }
+
+    private View.OnClickListener switchToMGame(){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent;
+                intent = new Intent(ChooseActivity.this, MiniGra.class);
+                startActivity(intent);
+            }
+        };
+    }
+
+    private View.OnClickListener switchToSkonta(){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent;
+                intent = new Intent(ChooseActivity.this, StanKonta.class);
+                startActivity(intent);
+            }
+        };
     }
 }
 

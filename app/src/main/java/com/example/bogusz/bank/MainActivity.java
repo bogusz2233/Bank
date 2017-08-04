@@ -8,6 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
 
     //GUI declaration
@@ -68,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void zaloguj(){
+
+//        sprawdzenie czy dane konto istnieje lub tworzenie nowegogo
+
+        creatingAcount();
+
         Intent intent;
         intent = new Intent(this,ChooseActivity.class);
         startActivity(intent);
@@ -84,5 +94,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void creatingAcount(){
+
+        boolean exist;
+        File file = new File(getFilesDir()+ File.separator+"Daniel.txt");
+        exist = file.exists();
+
+        if(!exist){
+            try {
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+                bufferedWriter.write("Daniel /n");
+                bufferedWriter.write(""+2000);
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
