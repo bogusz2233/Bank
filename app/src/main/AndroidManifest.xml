@@ -22,7 +22,16 @@
             android:name=".ChooseActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".MiniGra" />
-        <activity android:name=".StanKonta"></activity>
+        <activity android:name=".StanKonta" />
+        <activity
+            android:name=".Wplata"
+            android:label="@string/title_activity_wplata"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Wyplata" />
+        <activity
+            android:name=".Historia"
+            android:label="@string/title_activity_historia"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

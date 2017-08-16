@@ -9,34 +9,57 @@
     android:gravity="center"
     tools:context="com.example.bogusz.bank.StanKonta">
 
-    <TextView
-
-        android:layout_width="344dp"
-        android:layout_height="wrap_content"
-
+    <LinearLayout
+        android:orientation="vertical"
         android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:background="#58ffffff"
+        >
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/dolar"/>
+        <TextView
 
-        android:text="stan konta"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:textSize="30dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp" />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            android:gravity="center"
 
-    <TextView
-        android:id="@+id/txValue"
-        android:layout_marginTop="20dp"
-        android:layout_width="344dp"
-        android:layout_height="wrap_content"
+            android:text="stan konta"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp" />
 
-        android:gravity="center"
+        <TextView
+            android:id="@+id/txValue"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="70dp"
 
-        android:text="Value"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp" />
+            android:gravity="center"
+
+            android:text="Value"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+    </LinearLayout>
+
 
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.bogusz.bank;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.FileOutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,9 +22,16 @@ public class MainActivity extends AppCompatActivity {
 
     private Toast message;
 
+    //constanst
+    public static String NAME_FILE;
+    public static String NAME_FILE_LOG;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        NAME_FILE = "Daniel.txt";
+        NAME_FILE_LOG = "LogBank.txt";
+
         setContentView(R.layout.activity_main);
 
         //Gui init
@@ -77,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 //        sprawdzenie czy dane konto istnieje lub tworzenie nowegogo
 
         creatingAcount();
-
+        creatingHistory();
         Intent intent;
         intent = new Intent(this,ChooseActivity.class);
         startActivity(intent);
@@ -96,19 +102,32 @@ public class MainActivity extends AppCompatActivity {
 
     private void creatingAcount(){
 
-        boolean exist;
-        File file = new File(getFilesDir()+ File.separator+"Daniel.txt");
-        exist = file.exists();
+        File file = new File(getFilesDir(), NAME_FILE);
+        FileOutputStream outputStream;
+        String string = "daniel,2000";
 
-        if(!exist){
-            try {
-                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
-                bufferedWriter.write("Daniel /n");
-                bufferedWriter.write(""+2000);
-                bufferedWriter.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        try {
+            outputStream = openFileOutput(NAME_FILE, Context.MODE_PRIVATE);
+            outputStream.write(string.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void creatingHistory(){
+        // create file to writing history
+
+        File file = new File(getFilesDir(), NAME_FILE_LOG);
+        FileOutputStream outputStream;
+        String string = "2000,in,0";
+
+        try {
+            outputStream = openFileOutput(NAME_FILE_LOG, Context.MODE_PRIVATE);
+            outputStream.write(string.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

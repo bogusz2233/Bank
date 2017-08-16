@@ -10,4 +10,9 @@
     <string name="hello_blank_fragment">Nothing changed</string>
     <string name="mini_game">Mini gra</string>
     <string name="about_us">O nas</string>
+    <string name="title_activity_wplata">Wplata</string>
+    <string name="Load">Wpłać</string>
+    <string name="history">Historia wpłat</string>
+    <string name="get">Wypłać</string>
+    <string name="title_activity_historia">Historia</string>
 </resources>
